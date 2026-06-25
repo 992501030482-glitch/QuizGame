@@ -1,3 +1,5 @@
+# QuizGame
+![QuizGame Poster](assets/readme-poster.png)
 # OpenQuiz
 
 An Open-Source Multiplayer Quiz Application built using C++ and MySQL.
