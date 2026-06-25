@@ -31,13 +31,16 @@ public:
         mysql_query(conn, "CREATE DATABASE IF NOT EXISTS quiz");
         mysql_query(conn, "USE quiz");
         mysql_query(conn, "DROP TABLE IF EXISTS score");
+
         const char *query =
             "CREATE TABLE score ("
             "id INT AUTO_INCREMENT PRIMARY KEY, "
             "name VARCHAR(100), "
             "score INT, "
             "time DECIMAL(10,2))";
+
         mysql_query(conn, query);
+
     }
     void addPlayers(int n) {
         string name;
@@ -112,6 +115,7 @@ public:
 	  }
 };
 
+
 int main() {
   const char *server = "localhost";
   const char *user = "yourMySQLUsername";
@@ -120,5 +124,6 @@ int main() {
   if(db.connect(server, user, password, NULL)) {
     cout << "Success" << endl;
   }
+
   return 0;
 }
