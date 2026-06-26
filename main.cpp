@@ -115,6 +115,64 @@ public:
 	  }
 };
 
+class TimedQuizGame : public QuizGame {
+public:
+    void startQuiz(int n) {
+        MYSQL_RES *res;
+        MYSQL_ROW row;
+        char query[256];
+
+        for (int i = 0; i < n; i++) {
+            mysql_query(conn, "SELECT id,name FROM score");
+            res = mysql_store_result(conn);
+
+            cout << "\nPlayers:\n";
+            while ((row = mysql_fetch_row(res))) {
+                cout << row[0] << ". " << row[1] << endl;
+            }
+            mysql_free_result(res);
+
+            int choice;
+            cout << "Choose player number: ";
+            cin >> choice;
+
+            sprintf(query, "SELECT name FROM score LIMIT 1 OFFSET %d", choice - 1);
+            mysql_query(conn, query);
+
+            res = mysql_store_result(conn);
+            row = mysql_fetch_row(res);
+
+            string name = row[0];
+            mysql_free_result(res);
+
+            cout << "\nReady " << name << "? (y/n): ";
+            char ch;
+            cin >> ch;
+
+            struct timeval start, end;
+            gettimeofday(&start, NULL);
+
+            int score = 0;
+            if (ch == 'y') {
+                score = askQuestions(); // inherited method
+            }
+
+            gettimeofday(&end, NULL);
+
+            double time_taken =
+                (end.tv_sec - start.tv_sec) +
+                (end.tv_usec - start.tv_usec) / 1000000.0;
+
+            sprintf(query,
+                "UPDATE score SET score=%d, time=%.2f WHERE name='%s'",
+                score, time_taken, name.c_str());
+
+            mysql_query(conn, query);
+        }
+    }
+
+    //Disha Add here
+};
 
 int main() {
   const char *server = "localhost";
