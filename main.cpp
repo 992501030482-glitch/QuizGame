@@ -201,6 +201,11 @@ int main() {
   const char *user = "yourMySQLUsername";
   const char *password = "yourMySQLPassword";
 
+  Database db;
+  if(db.connect(server, user, password, NULL)) {
+    cout << "Success" << endl;
+  }
+  
   TimedQuizGame game;
 
     if (!game.connect(server, user, password, NULL)) {
@@ -215,11 +220,6 @@ int main() {
     game.addPlayers(n);
     game.startQuiz(n);
     game.leaderboard();
-    
-  Database db;
-  if(db.connect(server, user, password, NULL)) {
-    cout << "Success" << endl;
-  }
 
   return 0;
 }
