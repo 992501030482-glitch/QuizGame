@@ -171,7 +171,26 @@ public:
         }
     }
 
-    //Disha Add here
+    void leaderboard() {
+        MYSQL_RES *res;
+        MYSQL_ROW row;
+
+        mysql_query(conn,
+            "SELECT name,score,time FROM score ORDER BY score DESC, time ASC");
+
+        res = mysql_store_result(conn);
+
+        cout << "\nLeaderboard:\n";
+        int rank = 1;
+
+        while ((row = mysql_fetch_row(res))) {
+            cout << rank++ << ". "
+                 << row[0] << " | Score: " << row[1]
+                 << " | Time: " << row[2] << endl;
+        }
+
+        mysql_free_result(res);
+    }
 };
 
 int main() {
