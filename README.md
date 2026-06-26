@@ -2,15 +2,15 @@
 ![QuizGame Poster](assets/readme-poster.png)
 # OpenQuiz
 
-An Open-Source Multiplayer Quiz Application built using C++ and MySQL.
+An Open-Source Multiplayer Quiz Application built using C and MySQL.
 
 ## 📖 Overview
 
-OpenQuiz is an interactive command-line quiz application that allows multiple players to participate in quizzes, track their scores, and compete on a dynamic leaderboard. The project integrates C++ with MySQL for efficient data storage and retrieval while following open-source development practices using Git and GitHub.
+OpenQuiz is an interactive command-line quiz application that allows multiple players to participate in quizzes, track their scores, and compete on a dynamic leaderboard. The project integrates C with MySQL for efficient data storage and retrieval while following open-source development practices using Git and GitHub.
 
 ## 🎯 Objectives
 
-* Develop an interactive Quiz Game using C++ and MySQL.
+* Develop an interactive Quiz Game using C and MySQL.
 * Store and manage player information and quiz records.
 * Generate a dynamic leaderboard based on player performance.
 * Provide an engaging user experience with ASCII-based winner animations.
@@ -31,11 +31,11 @@ OpenQuiz is an interactive command-line quiz application that allows multiple pl
 
 ### Frontend
 
-* C++ Command Line Interface (CLI)
+* C Command Line Interface (CLI)
 
 ### Backend
 
-* C++
+* C
 * Object-Oriented Programming (OOP)
 
 ### Database
@@ -47,7 +47,7 @@ OpenQuiz is an interactive command-line quiz application that allows multiple pl
 
 * Git
 * GitHub
-* G++ Compiler
+* GCC Compiler
 * Visual Studio Code
 * Linux and Windows Development Environments
 
@@ -55,7 +55,7 @@ OpenQuiz is an interactive command-line quiz application that allows multiple pl
 
 User Input
 ↓
-Quiz Application (C++)
+Quiz Application (C)
 ↓
 Quiz Logic & Score Processing
 ↓
@@ -83,7 +83,7 @@ cd OpenQuiz
 ### Compile
 
 ```bash
-g++ main.cpp -o OpenQuiz
+gcc main.c -o quiz -lmysql
 ```
 
 ### Run
@@ -97,7 +97,7 @@ g++ main.cpp -o OpenQuiz
 * Fully functional quiz application
 * Persistent storage of player records
 * Real-time leaderboard generation
-* Improved understanding of C++, MySQL, Git, and GitHub
+* Improved understanding of C, MySQL, Git, and GitHub
 * Collaborative open-source project experience
 
 
