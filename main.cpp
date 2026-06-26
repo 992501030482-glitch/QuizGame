@@ -1,5 +1,7 @@
 #include<mysql/mysql.h>
 #include<iostream>
+#include <cstring>
+#include <sys/time.h>
 using namespace std;
 
 class Database {
@@ -194,9 +196,26 @@ public:
 };
 
 int main() {
+    
   const char *server = "localhost";
   const char *user = "yourMySQLUsername";
   const char *password = "yourMySQLPassword";
+
+  TimedQuizGame game;
+
+    if (!game.connect(server, user, password, NULL)) {
+        return 1;
+    }
+
+    int n;
+    cout << "Enter number of players: ";
+    cin >> n;
+
+    game.setupDatabase();
+    game.addPlayers(n);
+    game.startQuiz(n);
+    game.leaderboard();
+    
   Database db;
   if(db.connect(server, user, password, NULL)) {
     cout << "Success" << endl;
