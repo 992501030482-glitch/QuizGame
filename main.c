@@ -113,7 +113,16 @@ int user_Entry(MYSQL *conn, const char *server, const char *user, const char *pa
   printf("****************************************************\n\n");
   return score;
 }
-
+void about(const char *name) {
+  system("cls");
+  printf("\n .................................... C program Quiz Game......................................");
+  printf("\n __________________________________________________________________________________________________\n");
+  printf("\n                                            ABOUT");
+  printf("\n __________________________________________________________________________________________________");
+  printf("\n\n => This Quiz game is made by using C language and MYSQL only .");
+  printf("\n\n => You are going to be judged on the basis of points and the time taken by you....");
+  printf("\n\n\t\t***************---BEST OF LUCK------'%s'--**************************\n\n", name);
+}
 
   return EXIT_SUCCESS;
 }
