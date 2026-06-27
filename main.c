@@ -75,6 +75,45 @@ int user_Entry(MYSQL *conn, const char *server, const char *user, const char *pa
     sprintf(query, "INSERT INTO score(name) VALUES ('%s');", na);
     mysql_query(conn, query);
   }
+  int questions() {
+  int score = 0;
+  char question[][100]={">>>   1. Who is the founder of Microsoft? ",
+                        ">>>   2. Who is considered the father of the World Wide Web? ",
+                        ">>>   3. What programming language was developed by James Gosling at Sun Microsystems? "};
+
+  char Options[][100]={"          A. Steve Jobs","          B. Bill Gates" , "          C. Mark Zuckerberg", "          D. Larry Page",
+                       "          A. Bill Gates", "          B. Tim Berners-Lee", "          C. Steve Jobs", "          D. Larry Page",
+                       "          A. Java", "          B. Python", "          C. Ruby", "          D. C#"};
+
+  char answer[3]={'B','B','A'};
+  char guess;
+
+  for(int i = 0; i < 3; i++){
+    printf("%s\n\n", question[i]);
+
+    for(int j=(i*4); j < (i*4)+4; j++){
+      printf("%s\n\n", Options[j]);
+    }
+
+    printf("Enter your answer: ");
+    scanf(" %c", &guess);
+    printf("\n");
+
+    guess = toupper((unsigned char)guess);
+
+    if (guess == answer[i]){
+      printf(">> Correct!\n\n");
+      score++;
+    } else {
+      printf("\033[22;31m>> Wrong!\033[0m\n\n");
+    }
+  }
+  printf("****************************************************\n");
+  printf("Your score is %d out of 3.\n", score);
+  printf("****************************************************\n\n");
+  return score;
+}
+
 
   return EXIT_SUCCESS;
 }
