@@ -75,7 +75,8 @@ int user_Entry(MYSQL *conn, const char *server, const char *user, const char *pa
     sprintf(query, "INSERT INTO score(name) VALUES ('%s');", na);
     mysql_query(conn, query);
   }
-  int questions() {
+
+int questions() {
   int score = 0;
   char question[][100]={">>>   1. Who is the founder of Microsoft? ",
                         ">>>   2. Who is considered the father of the World Wide Web? ",
@@ -113,6 +114,7 @@ int user_Entry(MYSQL *conn, const char *server, const char *user, const char *pa
   printf("****************************************************\n\n");
   return score;
 }
+
 void about(const char *name) {
   system("cls");
   printf("\n .................................... C program Quiz Game......................................");
