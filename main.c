@@ -75,6 +75,8 @@ int user_Entry(MYSQL *conn, const char *server, const char *user, const char *pa
     sprintf(query, "INSERT INTO score(name) VALUES ('%s');", na);
     mysql_query(conn, query);
   }
+  return EXIT_SUCCESS;
+}
 
 int questions() {
   int score = 0;
@@ -126,5 +128,34 @@ void about(const char *name) {
   printf("\n\n\t\t***************---BEST OF LUCK------'%s'--**************************\n\n", name);
 }
 
-  return EXIT_SUCCESS;
+  
+
+void leaderboard(MYSQL *conn) {
+  MYSQL_RES *res;
+  MYSQL_ROW row;
+
+  printf("\n\n===================== LEADERBOARD =====================\n");
+  const char *query = "SELECT name, score, time FROM score ORDER BY score DESC, time ASC;";
+
+  if (mysql_query(conn, query)) {
+    printf("Error fetching leaderboard: %s\n", mysql_error(conn));
+    return;
+  }
+
+  res = mysql_store_result(conn);
+  if (!res) {
+    printf("Error storing leaderboard result: %s\n", mysql_error(conn));
+    return;
+  }
+
+  printf("\n %-5s %-25s %-10s %-10s\n", "Rank", "Name", "Score", "Time");
+  printf("-----------------------------------------------------------\n");
+
+  int rank = 1;
+  while ((row = mysql_fetch_row(res))) {
+    printf(" %-5d %-25s %-10s %-10s\n", rank, row[0], row[1], row[2]);
+    rank++;
+  }
+  printf("===========================================================\n\n");
+  mysql_free_result(res);
 }
