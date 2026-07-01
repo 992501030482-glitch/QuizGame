@@ -1,117 +1,85 @@
 # Changelog
 
-All notable changes to **OpenQuiz** (QuizGame) are documented in this file.
+This file is auto-generated from the repository's git history on every push to `main`. Do not edit manually.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-This project has not yet cut a formal semantic-versioned release, so entries
-are grouped by development date and pull request rather than version number.
-Once the project reaches a stable v1.0.0, this file will switch to
-[Semantic Versioning](https://semver.org/).
+Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Entries are grouped by date until the project adopts semantic version tags.
 
----
+## 2026-07-02
 
-## [Unreleased]
+### Merged
+- Merge pull request #14 from 992501030482-glitch/maharshi_updates
 
-### Added
-- Windows-specific build path with dedicated `main.c` entry point and headers (PR-pending, `windows` / `WinQuiz` branches).
-- `CONTRIBUTING.md` outlining the contribution workflow for the project (PR #13).
+## 2026-07-01
 
----
+### Changes
+- Add auto-generation script and workflow for CHANGELOG/CONTRIBUTORS (3f5d8d3 — Maharshi Paul)
+- Added: CHANGELO.md (e138f37 — Maharshi Paul)
+- Added: CONTRIBUTORS.md (8a4ba63 — Maharshi Paul)
+
+### Merged
+- Merge pull request #12 from 992501030482-glitch/satyam-WinQuiz
 
 ## 2026-06-30
 
 ### Merged
-- **PR #13** — `maharshi_main` → `main`: introduced `CONTRIBUTING.md` (169 lines) documenting the contribution process.
-
----
+- Merge pull request #13 from 992501030482-glitch/maharshi_main
 
 ## 2026-06-29
 
-### Added
-- Leaderboard functionality extended in the Windows build (`main.c`).
-- Indentation and formatting corrections applied across the Windows codebase.
+### Changes
+- new file: CONTRIBUTING.md (db71ecc — Maharshi Paul)
+- Added leaderboard functionality (bdb8dbc — 992501030278-afk)
+- corrected the indentation (d91162a — Aditya Kumar Singh)
 
-### Changed
-- `CONTRIBUTING.md` added as a new project document.
+## 2026-06-27
 
----
-
-## 2026-06-27 – 2026-06-28
-
-### Added
-- `About` function added to the CLI quiz flow.
-- `Question` function implemented for question presentation/handling.
-- Windows build (`main.c`) updated with additional `main` logic and headers.
-- Leaderboard functionality added to the Windows branch (`satyam-WinQuiz`).
-
----
+### Changes
+- About function added (df7b21c — Disha)
+- Question function added (8356deb — Disha)
+- Updated main (5f25261 — 992501030278-afk)
+- updated main for windows (8532874 — ananya2501020074)
 
 ## 2026-06-26
 
-### Added
-- Initial Windows-version scaffolding: required headers and function stubs for a Windows-compatible build.
+### Changes
+- README Updated (38e18b8 — Maharshi Paul)
+- remove main.cpp from win edition (a1cbd04 — Aditya Kumar Singh)
+- initial include headers and fns required in Windows version (34d44e5 — Aditya Kumar Singh)
+- done (4519231 — 992501030278-afk)
+- updated the int main (f62305c — 992501030278-afk)
+- Leaderboard function added (b55ca03 — Disha)
 
 ### Merged
-- **PR #9** — `satyam` → `main`: updates to `int main()` entry logic.
-- **PR #8** — `leader` → `main`: leaderboard function added.
-- **PR #7** — `maharshicodes` → `main`: `TimedQuiz` class introduced with `startQuiz()` functionality.
-
-### Removed
-- Duplicate/legacy `main.cpp` content removed from the Windows edition (225 lines removed) to eliminate divergence between platform builds.
-
-### Changed
-- `README.md` restructured and updated to meet documentation requirements.
-
----
+- Merge pull request #9 from 992501030482-glitch/satyam
+- Merge pull request #8 from 992501030482-glitch/leader
+- Merge pull request #7 from 992501030482-glitch/maharshicodes
 
 ## 2026-06-25
 
-### Added
-- `Player` class introduced, encapsulating player identity and score data.
-- `addPlayers()` function implemented to register multiple players at quiz start.
-- Project poster image (`assets/readme-poster.png`) added and linked in `README.md`.
-- Additional MySQL database setup (schema/connection groundwork extended).
-
-### Changed
-- Updated code relocated/consolidated into the main `QuizGame` project structure.
-- `README.md` updated with project overview content.
-
-### Removed
-- Duplicate code removed from the core game logic file.
+### Changes
+- modified: main.cpp (c34b2a9 — Maharshi Paul)
+- Update repo with no errors and for test purpose (78d53ee — 992501030482-glitch)
+- Added addPlayers function (9774c63 — DIPESHCHOUDHARY-CODES)
+- Added project poster to README (e8be1f5 — DIPESHCHOUDHARY-CODES)
 
 ### Merged
-- **PR #6** — `test-Atlas` → `main`: repository cleanup, verified build with no compile errors.
-- **PR #3** — `DIPESH_work` → `main`: player class and README poster integration.
-- **PR #1** — `satyam` → `main`: `README.md` update.
-- **PR #2** — `ananya-branch` → `main`: additional database setup.
-
----
+- Merge pull request #6 from 992501030482-glitch/test-Atlas
+- Merge pull request #3 from 992501030482-glitch/DIPESH_work
+- Merge branch 'main' into DIPESH_work
+- Merge pull request #1 from 992501030482-glitch/satyam
+- Merge pull request #2 from 992501030482-glitch/ananya-branch
 
 ## 2026-06-24
 
-### Added
-- `QuizGame` class introduced (extends `Database`), including:
-  - `setupDatabase()` — creates the `quiz` database and `score` table (`id`, `name`, `score`, `time`).
-  - `addPlayers(int n)` — inserts player names into the `score` table via parameterized query construction.
-
-### Changed
-- Iterative revisions to `main.cpp` while stabilizing the initial database-integration logic (added, then reverted, then re-added in refined form).
-
----
+### Changes
+- additional database setup (d834561 — ananya2501020074)
+- Update README.md (e544035 — Satyam Shekhar)
+- modified: main.cpp (f25b751 — Maharshi Paul)
+- modified: main.cpp (d895fc5 — Maharshi Paul)
 
 ## 2026-06-23
 
-### Added
-- **Project initialized** — first commit establishing `README.md`.
-- MIT `LICENSE` added.
-- Initial MySQL connectivity layer: `Database` class with `connect()`, `getConn()`, and RAII-style constructor/destructor managing the `MYSQL*` connection handle.
-
----
-
-## Notes on Repository Activity
-
-- **Branches used during development:** `main`, `windows`, `WinQuiz`, `winquiz`, `satyam-WinQuiz`, `maharshicodes`, `maharshi_main`, `DIPESH_work`, `ananya-winquiz`, `ananya-branch`, `leader`, `satyam`, `test-Atlas`.
-- **Pull requests merged to `main`:** #1, #2, #3, #6, #7, #8, #9, #13.
-- Development has occurred primarily through short-lived feature branches merged via pull request, consistent with the project's open-source collaborative workflow.
-
-[Unreleased]: https://github.com/992501030482-glitch/QuizGame/compare/main...HEAD
+### Changes
+- Initial setup for mysql conn (73e52e9 — 992501030482-glitch)
+- Create LICENSE (7ff8960 — Aditya Kumar Singh)
+- first commit (1504ec3 — 992501030482-glitch)
