@@ -35,6 +35,8 @@ Make sure you have the following installed:
 - Git
 - A code editor (VS Code recommended)
 
+### Installation
+
 ```bash
 sudo apt update
 sudo apt install mysql-server
