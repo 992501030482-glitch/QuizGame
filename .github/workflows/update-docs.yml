@@ -2,7 +2,7 @@ name: Update CHANGELOG and CONTRIBUTORS
 
 on:
   push:
-    branches: [main]
+    branches: [LnxQuiz]
   workflow_dispatch: {}   # allows manual trigger from the Actions tab
 
 permissions:
