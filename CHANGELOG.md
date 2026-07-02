@@ -7,6 +7,8 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## 2026-07-02
 
 ### Changes
+- fixed readme-poster (73bb305 — Aditya Kumar Singh)
+- docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (117ab54 — github-actions[bot])
 - Add files via upload (d48d7d1 — DIPESHCHOUDHARY-CODES)
 - docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (3ac0a6e — github-actions[bot])
 - Add files via upload (f9bfc32 — DIPESHCHOUDHARY-CODES)
