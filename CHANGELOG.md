@@ -1,6 +1,6 @@
 # Changelog
 
-This file is auto-generated from the repository's git history on every push to `main`. Do not edit manually.
+This file is auto-generated from the repository's git history on every push to `LnxQuiz`. Do not edit manually.
 
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Entries are grouped by date until the project adopts semantic version tags.
 
