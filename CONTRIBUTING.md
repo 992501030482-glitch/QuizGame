@@ -35,6 +35,11 @@ Make sure you have the following installed:
 - Git
 - A code editor (VS Code recommended)
 
+```bash
+sudo apt update
+sudo apt install mysql-server
+```
+
 ### Fork & Clone
 
 ```bash
@@ -46,7 +51,7 @@ cd QuizGame
 ### Build
 
 ```bash
-g++ main.cpp -o OpenQuiz
+g++ main.cpp -o OpenQuiz -lmysqlclient
 ```
 
 ### Run
