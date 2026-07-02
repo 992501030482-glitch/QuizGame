@@ -7,6 +7,9 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## 2026-07-02
 
 ### Changes
+- updated readme poster (3da0179 — ananya2501020074)
+- updated readme poster (c004193 — ananya2501020074)
+- docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (3e3a137 — github-actions[bot])
 - Update CHANGELOG.md (8811b23 — Aditya Kumar Singh)
 - docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (3db8995 — github-actions[bot])
 - fix: update changelog workflow trigger to LnxQuiz branch (7598bed — Maharshi Paul)
