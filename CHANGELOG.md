@@ -1,19 +1,20 @@
 # Changelog
 
-This file is auto-generated from the repository's git history on every push to `LnxQuiz`. Do not edit manually.
+This file is auto-generated from the repository's git history on every push to `main`. Do not edit manually.
 
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Entries are grouped by date until the project adopts semantic version tags.
 
 ## 2026-07-02
 
 ### Changes
-- fix: update changelog workflow trigger to LnxQuiz branch (2fe7c6e — Maharshi Paul)
+- Update CHANGELOG.md (8811b23 — Aditya Kumar Singh)
+- docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (3db8995 — github-actions[bot])
+- fix: update changelog workflow trigger to LnxQuiz branch (7598bed — Maharshi Paul)
 - Update CONTRIBUTING.md (3c10bf7 — Aditya Kumar Singh)
 - docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (94fa63f — github-actions[bot])
 - added neccessary flag for compilation (9ca088f — Aditya Kumar Singh)
 
 ### Merged
-- Merge pull request #15 from 992501030482-glitch/DIPESH_work
 - Update project structure
 - Merge pull request #14 from 992501030482-glitch/maharshi_updates
 
