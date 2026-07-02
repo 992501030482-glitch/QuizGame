@@ -6,12 +6,16 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## 2026-07-02
 
+### Changes
+- added neccessary flag for compilation (9ca088f — Aditya Kumar Singh)
+
 ### Merged
 - Merge pull request #14 from 992501030482-glitch/maharshi_updates
 
 ## 2026-07-01
 
 ### Changes
+- docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (854e6cf — github-actions[bot])
 - Add auto-generation script and workflow for CHANGELOG/CONTRIBUTORS (3f5d8d3 — Maharshi Paul)
 - Added: CHANGELO.md (e138f37 — Maharshi Paul)
 - Added: CONTRIBUTORS.md (8a4ba63 — Maharshi Paul)
