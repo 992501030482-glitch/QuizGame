@@ -7,9 +7,14 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## 2026-07-02
 
 ### Changes
+- fix: update changelog workflow trigger to LnxQuiz branch (2fe7c6e — Maharshi Paul)
+- Update CONTRIBUTING.md (3c10bf7 — Aditya Kumar Singh)
+- docs: auto-update CHANGELOG.md and CONTRIBUTORS.md [skip ci] (94fa63f — github-actions[bot])
 - added neccessary flag for compilation (9ca088f — Aditya Kumar Singh)
 
 ### Merged
+- Merge pull request #15 from 992501030482-glitch/DIPESH_work
+- Update project structure
 - Merge pull request #14 from 992501030482-glitch/maharshi_updates
 
 ## 2026-07-01
@@ -63,11 +68,14 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changes
 - modified: main.cpp (c34b2a9 — Maharshi Paul)
 - Update repo with no errors and for test purpose (78d53ee — 992501030482-glitch)
+- Removed duplicate code (bdf8bf1 — DIPESHCHOUDHARY-CODES)
 - Added addPlayers function (9774c63 — DIPESHCHOUDHARY-CODES)
+- player class added (4f3f517 — DIPESHCHOUDHARY-CODES)
 - Added project poster to README (e8be1f5 — DIPESHCHOUDHARY-CODES)
 
 ### Merged
 - Merge pull request #6 from 992501030482-glitch/test-Atlas
+- Move updated code inside QuizGame
 - Merge pull request #3 from 992501030482-glitch/DIPESH_work
 - Merge branch 'main' into DIPESH_work
 - Merge pull request #1 from 992501030482-glitch/satyam
